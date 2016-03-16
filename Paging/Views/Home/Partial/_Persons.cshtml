@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Paging.Models.Persons>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.FirstName</td>
+        <td>@item.LastName</td>
+        <td>@item.FatherName</td>
+        <td>@(item.Gender ? "Man" : "Woman")</td>
+    </tr>
+}

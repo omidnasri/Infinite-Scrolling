@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Paging.Models.Persons>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table" id="tblDefault">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Family</th>
+            <th>Father</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.FatherName</td>
+                <td>@(item.Gender ? "Man" : "Woman")</td>
+            </tr>
+        }
+    </tbody>
+</table>
